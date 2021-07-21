@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img id="next_picture" src="MyFamily.jfif" style="height: 420;" width="340">
+        <h4 id="next_text">My Family</h4>
+        <br>
+        <button type="button" id="imageSwitch" onclick="nextSlide()" style="height: 30px; width: 100px;">Next</button>
+    </body> 
+    <script>
+var Family_Image=["IMG_Aditya.JPG","IMG_Krishna.JPG","IMG_Maitri.JPG","IMG_Minal.JPG","IMG_Srinivas.JPG"];
+var Family_Text=["Aditya Nemani","Krishna Nemani","Maitri Nemani","Minal Nemani","Srinivas Nemani"];
+var i = 0;
+function nextSlide(){ 
+    var num_of_fam = 4;
+    if(i>num_of_fam){
+        i=0;
+    }
+var text = Family_Text[i];
+var image = Family_Image[i]
+console.log(i);
+  document.getElementById("next_text").innerHTML = text;
+  document.getElementById("next_picture").src = image;
+  i++;
+}
+    </script>
+    </html>
